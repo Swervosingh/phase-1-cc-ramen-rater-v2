@@ -55,6 +55,22 @@ const addSubmitListener = () => {
     const newRating = e.target['new-rating'].value
     const newComment = e.target['new-comment'].value
 
+    // fetch("http://localhost:3000/ramens", {
+    //   method: "POST", 
+    //   headers: {
+    //     "content-typee": "application/json",
+    //   }
+    //   body: JSON.stringify(newRamen),  
+    // })
+    // .then((res) => {
+    //   if (res.status === 201) {
+    //     return res.json();
+    //   }
+    // })
+    // .then((data) => {
+    //   console.log(data);
+    // })
+
     const form = {
       "name": newName,
       "restaurant": newRestaurant,
@@ -80,9 +96,3 @@ const main = () => {
 main()
 
 // Export functions for testing
-export {
-  displayRamens,
-  addSubmitListener,
-  handleClick,
-  main,
-};
