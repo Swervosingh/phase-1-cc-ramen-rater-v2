@@ -5,16 +5,17 @@ const displayRamens = () => {
     ramenData.forEach(displayRamenImage)
 
   })};
+  
 // index.js
 
-const displayRamenImage = (ramens) => {
+const displayRamenImage = (ramen) => {
   const ramenMenu = document.querySelector('#ramen-menu')
   const ramenImages = document.createElement('img')
-  ramenImages.src = ramens.image
+  ramenImages.src = ramen.image
 
   ramenMenu.append(ramenImages)
   ramenImages.addEventListener("click", () => { 
-    handleClick(ramens)
+    handleClick(ramen)
   })
 }
 // Callbacks
@@ -28,7 +29,7 @@ const handleClick = (ramens) => {
   const name = document.querySelector('.name')
   const restaurant = document.querySelector('.restaurant')
   const ratingDisplay = document.getElementById('rating-display')
-  const commentDisplay =document.getElementById('comment-display')
+  const commentDisplay = document.getElementById('comment-display')
 
   // second display element on the page
 
